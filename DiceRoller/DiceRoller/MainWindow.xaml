@@ -1,0 +1,52 @@
+﻿<Window x:Class="DiceRoller.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="DiceRoller" Height="300" Width="300"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="2, 2, 2, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label 
+                    FontSize="20"
+                    HorizontalAlignment="Center"
+                    Content="{Binding numberLabel}"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBox 
+                    FontSize="20"
+                    HorizontalAlignment="Stretch" 
+                    Text="{Binding die.numberOfDice, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Margin="2">
+             <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label 
+                    FontSize="20"
+                    HorizontalAlignment="Center"
+                    Content="{Binding sidesLabel}"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <TextBox 
+                    FontSize="20"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding die.numberOfSides, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Margin=" 2, 0, 2, 2">
+            <Button FontSize="20" Command="{Binding GenerateCommand}">Generate</Button>
+        </Grid>
+    </Grid>
+</Window>
