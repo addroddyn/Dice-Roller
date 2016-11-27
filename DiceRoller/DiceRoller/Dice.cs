@@ -1,11 +1,7 @@
-﻿
-using System;
+﻿using System;
 
 namespace DiceRoller.Dice
 {
-    /// <summary>
-    /// Description of Data.
-    /// </summary>
     public class Die : BaseObject
     {
         private string _numberOfDice;

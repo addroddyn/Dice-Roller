@@ -1,7 +1,6 @@
 ﻿
 using System;
 using System.Windows.Input;
-using DiceRoller.Roller;
 
 namespace DiceRoller.Commands
 {
@@ -30,11 +29,11 @@ namespace DiceRoller.Commands
     
         #endregion
 
-        public GenerateDice(Thrower thrower)
+        public GenerateDice(DiceRoller.Thrower.Thrower thrower)
         {
             _thrower = thrower;
         }
         
-        private Thrower _thrower;
+        private DiceRoller.Thrower.Thrower _thrower;
     }
 }
