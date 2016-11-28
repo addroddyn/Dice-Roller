@@ -45,8 +45,10 @@ namespace DiceRoller.Thrower
             {
                 resultInt[i] = rnd.Next(1, numberOfSides + 1);
             }
-            Roll currentRoll = new Roll(numberOfDice, numberOfSides, resultInt);
-            _throwHistoryRoll.Insert(0, currentRoll);
+            Roll roll = new Roll(numberOfDice, numberOfSides, resultInt);
+            _currentRoll = roll;
+            _throwHistoryRoll.Insert(0, roll);
+            ShowInfo();
         }
         
         private void ShowInfo()
