@@ -1,5 +1,5 @@
 # Dice-Roller
-A simple little dice roller
+A simple little dice roller, built with the MVVM design pattern.
 
 - The user can set the number of dice and number of sides each die has. 
 - The program keeps track of all throws
